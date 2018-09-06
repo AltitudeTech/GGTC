@@ -3,6 +3,10 @@
   "main": "index.js",
   "author": "DavyBello <bellooladipupo41@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "^8.11.4",
+    "yarn": "^1.9.4"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
