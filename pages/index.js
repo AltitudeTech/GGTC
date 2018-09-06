@@ -25,30 +25,35 @@ const Home = () => (
       </div>
     </Container>
     <Footer />
-    <style jsx>{`
+    <style global jsx>{`
       .root {
         padding-top : 10px;
       }
       .mid-section {
         padding: 20px 0px 20px;
-        min-height: 57vh;
+        min-height: 56vh;
       }
-      @media (min-width: 576px) {
-        :global(body) {
-          background-size: cover;
+      @media only screen and (max-width: 1020px) {
+        body {
+          background-size: cover !important;
         }
       }
-      :global(body) {
+      @media only screen and (min-width: 1367px) {
+        .mid-section {
+          min-height: 62vh;
+        }
+      }
+      body {
         background: url('/static/images/background.svg');
         background-repeat: no-repeat;
         background-size: contain;
         color: white;
       }
-      :global(a) {
+      a {
         color: white !important;
         text-decoration: none !important;
       }
-      :global(a:hover) {
+      a:hover {
         color: #DAA520 !important;
       }
       `}</style>

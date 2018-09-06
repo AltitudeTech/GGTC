@@ -13,14 +13,12 @@ export default () => {
 
   return <footer className='Footer'>
     {/* <Container> */}
-      <Row className="d-flex align-items-center h-100">
+      <Row className="d-flex align-items-center h-100 mb-20">
         <Col md={4}>
           <div className="bible-verse">
             Hebrews 4:16
           </div>
-          <span className="tm">
-            <b>Grace Global Trinity Center.</b> All Rights Reserved 2018
-          </span>
+
         </Col>
         <Col md={4} className="bible-text">
           {/* <div > */}
@@ -49,6 +47,9 @@ export default () => {
           </Row>
         </Col>
       </Row>
+      <span className="tm">
+        <b>Grace Global Trinity Center.</b> All Rights Reserved 2018
+      </span>
       {/* <nav>
         <div className="Footer-nav-group">
         </div>
@@ -59,9 +60,11 @@ export default () => {
       .bible-verse {
         font-size: 65px;
         text-align: center;
+        margin-bottom: 20px;
       }
       :global(.bible-text) {
         padding: 0px 0px 20px;
+        margin-bottom: 20px;
       }
       :global(.bible-text::after) {
         border: 1px solid #2ba5f7;
@@ -84,7 +87,7 @@ export default () => {
         width: 100%;
         // margin: 0;
         // border: 0;
-        display: flex;
+        // display: flex;
         // padding: 0;
         // overflow: hidden;
         // position: relative;
