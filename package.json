@@ -8,7 +8,7 @@
     "build": "next build",
     "preexport": "npm run build",
     "export": "next export",
-    "prestart": "npm run export",
+    "heroku-postbuild": "npm run export",
     "start": "serve out"
   },
   "dependencies": {
