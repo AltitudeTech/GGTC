@@ -1,18 +1,13 @@
 import React from 'react';
 import { Row, Col, Button, Form, Input } from 'reactstrap';
-// import YouTubePlaylist from 'react-youtube-playlist';
-import YouTube from 'react-youtube';
+import dynamic from 'next/dynamic'
+
+const YouTube = dynamic(import('./YouTube'), {
+  ssr: false
+})
 
 export default class Example extends React.Component {
   render() {
-    const opts = {
-      // playlist: 'RDjsur8561',
-      height: '160',
-      width: '310',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
-    };
 
     return (
       <div className="prayer">
@@ -27,19 +22,9 @@ export default class Example extends React.Component {
             </Col>
           </Row>
         </Form>
-        <YouTube
-          videoId="2g811Eo7K8U"
-          // playlist="RDjsur8561"
-          opts={opts}
-          onReady={this._onReady}
-        />
-        {/* <YouTubePlaylist
-          width={'85%'}
-          height={390}
-          api_key='AIzaSyDqOg0997GmawkD1u1jKdXfqULYx5t7kbs'
-          playlist_id='RDjsur8561'
-          show_thumbnails
-        /> */}
+
+        <YouTube />
+
         <style jsx>{`
           :global(.prayer-form) {
             padding: 10px 0px 10px;

@@ -1,5 +1,6 @@
 // import Link from 'next/link'
 import { Row, Col } from "reactstrap";
+import Moment from 'react-moment';
 import SvgLoader from 'bv-react-svgloader'
 
 const socialLinks = [
@@ -30,13 +31,11 @@ export default () => {
         <Col md={4}>
           <Row>
             <Col md={4}>
-              <div>countdown</div>
-              <div>
-                <div>198</div>
-                <div>days to go</div>
-              </div>
+              <div className="bg-b">countdown</div>
+              <Moment diff={new Date()} unit="days">2019-01-01T00:00-0000</Moment>
+              <div className="bg-b">days to go</div>
             </Col>
-            <Col md={8}>
+            <Col md={8} style={{ paddingTop: '30px' }}>
               <div>Stay Connected</div>
               {socialLinks.map(({img, link}, i) => (
                 <a href={link} key={i} className="social-item">
@@ -57,6 +56,12 @@ export default () => {
       {/* <p>2018 David Yusuf. All rights reserved. </p> */}
     {/* </Container> */}
     <style jsx>{`
+      :global(time) {
+        font-size: 45px;
+      }
+      .bg-b {
+        background-color: #2ba5f7;
+      }
       .bible-verse {
         font-size: 65px;
         text-align: center;

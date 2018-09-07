@@ -23,7 +23,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-ga": "^2.5.3",
-    "react-youtube": "^7.6.0",
+    "react-moment": "^0.7.9",
+    "react-yt": "^0.1.2",
     "reactstrap": "^6.4.0",
     "serve": "^10.0.0",
     "svgs": "^3.2.1"
